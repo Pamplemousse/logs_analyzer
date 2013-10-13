@@ -4,20 +4,18 @@ Logs_analyzer
 A log analyzer for the Ingesup's SEO courses.
 
 
-## Création d'une base de données
+## Install MongoDB and create new database
 > sudo apt-get install mongodb mongodb-dev
-
-Connect to mongo CLI and create new database
 > mongo
 > use logs_analyzer;
 
-## Installation de l'extension pour php
+## Install php extension
 
 > sudo apt-get install pecl
-
 > sudo pecl install mongo
 
-Add mongo extension : extension=mongo.so in php.ini
+Add new line in php.ini with :
+> extension=mongo.so
 
 ## Import csv into DB
 php -c /etc/php5/apache2/php.ini import.php
