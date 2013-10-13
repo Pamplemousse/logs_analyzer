@@ -31,6 +31,14 @@
             // --> pareil qu'au dessus
         }
 
+        public function getCountHomePage() {
+            return $this->collection->count(array('Url' => "/"));
+        }
+
+        public function getCountPage($url) {
+            return $this->collection->count(array('Url' => array('$regex' => $url)));
+        }
+
     }
 
 ?>

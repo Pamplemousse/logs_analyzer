@@ -20,14 +20,17 @@
     }
 
 
-    function getDimensionTypePages() {
-        $m = new Mongo;
-        $collection = $m->selectDB("logs_analyzer")->selectCollection('logs');
-
-        // $cursor = $collection->find(array(
-        //     "Url" => "/"
-        // ));
-        // foreach($cursor as $row) var_dump($row);
+    function getDimensionTypePages($logs) {
+        echo '<h1>Dimension type pages</h1>';
+        echo 'Nombre de logs requ&ecirc;tant "/" : '.$logs->getCountHomePage("/");
+        echo '<br/>';
+        echo 'Nombre de logs requ&ecirc;tant "/v-" : '.$logs->getCountPage("/v-");
+        echo '<br/>';
+        echo 'Nombre de logs requ&ecirc;tant "/l-" : '.$logs->getCountPage("/l-");
+        echo '<br/>';
+        echo 'Nombre de logs requ&ecirc;tant "/f-" : '.$logs->getCountPage("/f-");
+        echo '<br/>';
+        echo 'Nombre de logs requ&ecirc;tant "/s-" ou "/sa-10" : '.($logs->getCountPage("/s-")+$logs->getCountPage("/sa-10"));
     }
 
 
