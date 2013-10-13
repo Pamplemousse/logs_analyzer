@@ -17,4 +17,7 @@ sudo apt-get install pecl
 
 sudo pecl install mongo
 
-// Penser à rajouter extension=mongo.so dans php.ini
+// Add mongo extension : extension=mongo.so in php.ini
+
+## Import csv into DB
+php -c /etc/php5/apache2/php.ini import.php
