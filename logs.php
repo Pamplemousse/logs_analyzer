@@ -39,6 +39,15 @@
             return $this->collection->count(array('Url' => array('$regex' => $url)));
         }
 
+        public function getCountCrawler($crawler) {
+            return $this->collection->count(array('UserAgent' => array('$regex' => $crawler, '$options' => 'i')));
+        }
+
+        // This regexp seems not working
+        public function getCountSearchEngine($searchEngine) {
+            return $this->collection->count(array('Referer' => array('$regex' => $searchEngine, '$options' => 'i')));
+        }
+
     }
 
 ?>
