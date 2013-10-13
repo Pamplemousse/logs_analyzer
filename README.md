@@ -17,19 +17,23 @@ sudo apt-get install pecl
 
 sudo pecl install mongo
 
-// Add mongo extension : extension=mongo.so in php.ini
+<!--- Add mongo extension : extension=mongo.so in php.ini -->
 
 ## Import csv into DB
 php -c /etc/php5/apache2/php.ini import.php
 
 ## Some usefull commands for mongo CLI
-// Connect to the mongo CLI
+<!--- Connect to the mongo CLI -->
 mongo
-// Use logs_analyzer database
+
+<!--- Use logs_analyzer database -->
 use logs_analyzer;
-// Count objects in 'logs' collection
+
+<!--- Count objects in 'logs' collection -->
 db.logs.count()
-// List objects in 'logs' collection
+
+<!--- List objects in 'logs' collection -->
 db.logs.find()
-// Remove all objects in 'logs' collection
+
+<!--- Remove all objects in 'logs' collection -->
 db.logs.remove()
