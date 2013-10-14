@@ -33,9 +33,6 @@
                     overflow: 'justify'
                 }
             },
-            // tooltip: {
-            //     valueSuffix: 'milliers'
-            // },
             plotOptions: {
                 bar: {
                     dataLabels: {
