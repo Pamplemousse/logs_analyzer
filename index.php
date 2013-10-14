@@ -1,4 +1,4 @@
-<h1>Analyser les logs par :</h1>
+<h1>Analyser les logs par ...</h1>
 
 <ul>
     <li><a href='faits.php'>faits</a></li>
