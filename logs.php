@@ -45,6 +45,7 @@
 
         // This regexp seems not working
         public function getCountSearchEngine($searchEngine) {
+            // return $this->collection->find(array('DateTime' => '27/08/2012 18:06'));
             return $this->collection->count(array('Referer' => array('$regex' => $searchEngine, '$options' => 'i')));
         }
 

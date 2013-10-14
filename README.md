@@ -27,7 +27,7 @@ A log analyzer for the Ingesup's SEO courses.
 Add the following to your php.ini file :
 > extension=mongo.so
 
-## Import csv into DB
+## Import csv into DB (with .csv file in UTF-8 !)
 php -c /etc/php5/apache2/php.ini import.php
 
 ## Some usefull commands for mongo CLI

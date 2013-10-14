@@ -7,15 +7,14 @@
         while (!feof($file)) {
             $buffer = fgets($file);
             $buffer = explode(';', $buffer);
+            $i = 9;
             if ($buffer[9][0] == '"') {
                 $useragent = '';
-                $i = 9;
                 while (!preg_match('/."/i', $buffer[$i])) {
                     $useragent .= $buffer[$i].';';
                     $i ++;
                 }
                 $useragent .= $buffer[$i];
-                $i++;
             } else {
                 $useragent = $buffer[9];
             }

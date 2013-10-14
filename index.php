@@ -49,13 +49,11 @@
 
     function getDimensionSearchEngine($logs) {
         echo '<h1>Dimension search engine</h1>';
-
-        // ==> following not working : wtf are this results !?
-        // echo 'Nombre de logs Google : '.$logs->getCountSearchEngine("Google");
-        // echo '<br/>';
-        // echo 'Nombre de logs Yahoo : '.$logs->getCountSearchEngine("yahoo");
-        // echo '<br/>';
-        // echo 'Nombre de logs Bing : '.$logs->getCountSearchEngine("bing");
+        echo 'Nombre de logs Google : '.$logs->getCountSearchEngine("google");
+        echo '<br/>';
+        echo 'Nombre de logs Yahoo : '.$logs->getCountSearchEngine("yahoo");
+        echo '<br/>';
+        echo 'Nombre de logs Bing : '.$logs->getCountSearchEngine("bing");
     }
 
 ?>
