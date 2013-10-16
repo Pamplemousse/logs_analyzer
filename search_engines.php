@@ -10,9 +10,9 @@
     //     echo '<br/>';
     //     echo 'Nombre de logs Bing : '.$logs->getCountSearchEngine("bing");
     // }
-    $title = 'Dimension Moteurs de recherche';
+    $title      = 'Dimension Moteurs de recherche';
     $categories = "['Google', 'Yahoo !', 'Bing']";
-    $data = "[".$logs->getCountSearchEngine("google").", ".$logs->getCountSearchEngine("yahoo").", ".$logs->getCountSearchEngine("bing")."]";
+    $data       = "[".$logs->getCountSearchEngine("google").", ".$logs->getCountSearchEngine("yahoo").", ".$logs->getCountSearchEngine("bing")."]";
     include('chart_template.php');
 
 ?>
