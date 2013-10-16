@@ -16,14 +16,15 @@
         public function getAverageResponseTime() {
             // db.logs.aggregate( { "$group": { _id: "ponyponypony", averageResponseTime: { $avg: "$ResponseTime"}}})
             // --> la requête du dessus marche un peu dans la console (erreur de signe, dépassement de la taille en mémoire ?) mais ne donne rien dans ce langage de $*!# :
-            // echo '<pre>';
-            // print_r($collection->aggregate(array(
-            //     '$group' => array(
-            //         '_id'             => 'youareamonkey',
-            //         'avgResponseTime' => array( '$avg' : "$ResponseTime" )
-            //     )
-            // )));
-            // echo '</pre>';
+
+            $plop=$this->collection->aggregate(array(
+                '$group' => array(
+                    '_id' => '$state',
+                    'avgResponseTime' => array('$avg' => '$ResponseTime')
+            )));
+
+            return $plop;
+
         }
 
         public function getAverageResponseSize() {

@@ -14,5 +14,4 @@
     $categories = "['Google', 'Yahoo !', 'Bing']";
     $data       = "[".$logs->getCountSearchEngine("google").", ".$logs->getCountSearchEngine("yahoo").", ".$logs->getCountSearchEngine("bing")."]";
     include('chart_template.php');
-
 ?>
