@@ -49,6 +49,10 @@
             return $this->collection->count(array('Referer' => array('$regex' => $searchEngine, '$options' => 'i')));
         }
 
+        public function getCountHttpCode($HttpCode) {
+            return $this->collection->count(array('HttpCode' => array('$regex' => $HttpCode, '$options' => 'i')));
+        }
+
     }
 
 ?>

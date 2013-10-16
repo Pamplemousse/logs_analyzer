@@ -1,9 +1,18 @@
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="http://code.highcharts.com/highcharts.js"></script>
-<script src="http://code.highcharts.com/modules/exporting.js"></script>
+<html>
+    <head>
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+        <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    </head>
+    <body>
+        <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
-<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+        <p>
+            <a href="index.php">back</a>
+        </p>
+    </body>
 
+</html>
 <script>
 
   $(function () {
