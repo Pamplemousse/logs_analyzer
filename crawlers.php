@@ -14,13 +14,13 @@
 
     $title = 'Dimension Crawlers';
     $categories = "['googlebot', 'googlebot-mobile', 'googlebot-image', 'bingbot', 'yahoo / slurp', 'Google SEA', 'Majestic SEO']";
-    $data = "[".($logs->getCountCrawler("Googlebot")-$logs->getCountCrawler("Googlebot-Mobile")-$logs->getCountCrawler("Googlebot-Image")).", 
-            ".$logs->getCountCrawler("Googlebot-Mobile").", 
-            ".$logs->getCountCrawler("Googlebot-Image").", 
-            ".$logs->getCountCrawler("Bingbot").", 
+    $data = "[".($logs->getCountCrawler("Googlebot")-$logs->getCountCrawler("Googlebot-Mobile")-$logs->getCountCrawler("Googlebot-Image")).",
+            ".$logs->getCountCrawler("Googlebot-Mobile").",
+            ".$logs->getCountCrawler("Googlebot-Image").",
+            ".$logs->getCountCrawler("Bingbot").",
             ".$logs->getCountCrawler("Yahoo! Slurp").",
-            ".($logs->getCountCrawler("AdsBot-Google")+$logs->getCountCrawler("Mediapartners-Google")).",  
+            ".($logs->getCountCrawler("AdsBot-Google")+$logs->getCountCrawler("Mediapartners-Google")).",
             ".$logs->getCountCrawler("MJ12bot")."]";
-
+    include("chart_template.php");
 
 ?>

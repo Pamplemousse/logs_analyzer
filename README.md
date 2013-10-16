@@ -20,7 +20,7 @@ A log analyzer for the Ingesup's SEO courses.
 
 ## Install php extension
 
-> sudo apt-get install pecl
+> sudo apt-get install php-pear
 
 > sudo pecl install mongo
 
