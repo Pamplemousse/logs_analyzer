@@ -8,7 +8,7 @@
 
         // ==> following not working
         echo '<br/>';
-        echo 'Moyenne des temps de r&eacute;ponse :';
+        echo 'Moyenne des temps de r&eacute;ponse : ';
         $pouet = $logs->getAverageResponseTime();
         print_r($pouet['result'][0]['avgResponseTime']);
         echo '<br/>';

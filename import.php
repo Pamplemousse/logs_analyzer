@@ -1,5 +1,4 @@
 <?php
-
     $m = new MongoClient();
     $db = $m->selectDB("logs_analyzer");
     $file = fopen('02_logs.csv', 'r');
@@ -39,5 +38,4 @@
         }
         fclose($file);
     }
-
 ?>
