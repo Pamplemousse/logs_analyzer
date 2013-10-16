@@ -12,8 +12,15 @@
     //     echo 'Nombre de logs yahoo / slurp : '.$logs->getCountCrawler("Yahoo! Slurp");
     // }
     $title = 'Dimension Crawlers';
-    $categories = "['googlebot', 'googlebot-mobile', 'bingbot', 'yahoo / slurp']";
-    $data = "[".$logs->getCountCrawler("Googlebot").", ".$logs->getCountCrawler("Googlebot-Image").", ".$logs->getCountCrawler("Bingbot").", ".$logs->getCountCrawler("Yahoo! Slurp")."]";
+    $categories = "['googlebot', 'googlebot-mobile', 'googlebot-image', 'bingbot', 'yahoo / slurp', 'Google SEA', 'Majestic SEO']";
+    $data = "[".($logs->getCountCrawler("Googlebot")-$logs->getCountCrawler("Googlebot-Mobile")-$logs->getCountCrawler("Googlebot-Image")).", 
+            ".$logs->getCountCrawler("Googlebot-Mobile").", 
+            ".$logs->getCountCrawler("Googlebot-Image").", 
+            ".$logs->getCountCrawler("Bingbot").", 
+            ".$logs->getCountCrawler("Yahoo! Slurp").",
+            ".($logs->getCountCrawler("AdsBot-Google")+$logs->getCountCrawler("Mediapartners-Google")).",  
+            ".$logs->getCountCrawler("MJ12bot")."]";
+
     include('chart_template.php');
 
 ?>
